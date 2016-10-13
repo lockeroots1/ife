@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度前端学院</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            font-size: 14px;
+        }
+
+        .main {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            margin-top: 20px;
+        }
+
+        .navbar ul {
+            float: right;
+        }
+
+        .navbar ul li {
+            float: left;
+            margin-left: 10px;
+            margin-right: 20px;
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .navbar > a {
+            margin-left: 30px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            padding-bottom: 10px;
+            border-bottom: 4px solid red;
+            color: red;
+        }
+
+        .comment_1 {
+            margin: 12px auto 0;
+            position: relative;
+        }
+
+        .comment_1 img {
+            width: 1200px;
+            height: 700px;
+        }
+
+        .comment_1_text {
+            color: white;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+        }
+
+        .comment_1 .p2 {
+            font-size: 20px;
+        }
+
+        .comment_1 .p3 {
+            background-color: rgb(255, 121, 94);
+            width: 350px;
+            text-align: center;
+            height: 70px;
+            padding-top: 5px;
+            font-size: 40px;
+            margin-top: 80px;
+        }
+
+        .comment_2 {
+            height: 250px;
+        }
+
+        .comment_2 div {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            width: 25%;
+            float: left;
+        }
+
+        .comment_2 div span {
+            color: red;
+            margin: 0 auto 40px;
+            display: block;
+            text-align: center;
+        }
+
+        .comment_2 div p {
+            width: 60%;
+            padding: 0 40px;
+            color: #938e8c;
+        }
+
+        .comment_2 .p1 p, .comment_2 .p2 p, .comment_2 .p3 p {
+            border-right: 2px solid #938e8c;
+        }
+
+        .comment_3 {
+            background-color: #cdc6c4;
+            height: 320px;
+        }
+
+        .comment_3 span {
+            display: block;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 110px;
+            color: red;
+        }
+
+        .comment_3 p {
+            text-align: center;
+            font-size: 50px;
+            color: rgba(51, 16, 14, 0.38);
+        }
+
+        .comment_4 {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        .comment_4 img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .comment_4 div {
+            position: absolute;
+            width: 80%;
+            top: 50px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .comment_4 div p {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .comment_4 div form input {
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            background-image: url("../img/ico_1_7_1.png");
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .comment_4 div form input:hover {
+            border: 1px solid red;
+        }
+
+        .comment_4 div form section option {
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        .comment_5 {
+            width: 80%;
+            height: 400px;
+            margin: 100px auto;
+        }
+
+        .comment_5 div {
+            width: 22%;
+            float: left;
+            margin: 0 10px;
+        }
+
+        .comment_5 div img {
+            text-align: center;
+            width: 200px;
+            height: 300px;
+        }
+
+        .comment_5 div p {
+            text-align: center;
+            color: rgba(24, 12, 12, 0.46);
+            padding: 10px 0;
+        }
+
+        .comment_5 div .p1 {
+            font-size: 25px;
+            color: black;
+        }
+
+        .comment_6 {
+            width: 100%;
+            height: 450px;
+        }
+
+        .comment_6 .left {
+            width: 62%;
+            height: 450px;
+            position: relative;
+            float: left;
+        }
+
+        .comment_6 .left img {
+            width: 100%;
+            height: 450px;
+        }
+
+        .comment_6 .left div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .comment_6 .right {
+            width: 350px;
+            height: 450px;
+            margin-left: 30px;
+            float: left;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .comment_6 section {
+            margin-top: 120px;
+        }
+
+        .comment_6 .right p {
+            margin: 12px 0;
+        }
+
+        .comment_7 {
+            width: 100%;
+            height: 450px;
+        }
+
+        .comment_7 .right {
+            height: 430px;
+            width: 38%;
+            float: right;
+        }
+
+        .comment_7 .right img {
+            width: 100%;
+            height: 450px;
+        }
+
+        .comment_7 .left {
+            width: 62%;
+            float: right;
+            height: 450px;
+        }
+
+        .comment_7 .left section {
+            width: 50%;
+            height: 450px;
+            font-size: 25px;
+            float: left;
+        }
+
+        .comment_7 .left div {
+            margin-top: 160px;
+        }
+
+        .comment_7 .left .p1 {
+            background-color: rgba(236, 106, 106, 0.95);
+            text-align: center;
+            color: white;
+        }
+
+        .comment_7 .left div hr {
+            width: 50px;
+            margin: 20px auto;
+            border: 1px solid white;
+        }
+
+        .comment_7 .left #p1 {
+            width: 150px;
+            margin: 0 auto;
+            border: 1px solid white;
+        }
+
+        .comment_7 .left .p2 {
+            text-align: center;
+        }
+
+        .comment_7 .left #p2 {
+            width: 150px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        .comment_8 {
+            width: 100%;
+            height: 300px;
+            margin-top: 60px;
+        }
+
+        .comment_8 p {
+            text-align: center;
+        }
+
+        .comment_9 {
+            width: 80%;
+            margin: 0 auto;
+            height: 300px;
+        }
+
+        .comment_9 .left {
+            width: 30%;
+            float: left;
+        }
+
+        .comment_9 .left p {
+            color: #999;
+        }
+
+        .comment_9 .right {
+            width: 70%;
+            float: left;
+        }
+
+        #i1 {
+            width: 45%;
+            margin-left: 30px;
+            height: 35px;
+            background-color: #ececec;
+            font-size: 20px;
+        }
+
+        #i2 {
+            width: 45%;
+            margin-left: 20px;
+            height: 35px;
+            background-color: #ececec;
+            font-size: 20px;
+        }
+
+        #i3 {
+            width: 45%;
+            margin-left: 30px;
+            height: 35px;
+            background-color: #ececec;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #i4 {
+            width: 45%;
+            margin-left: 20px;
+            height: 35px;
+            background-color: #ececec;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .comment_9 .right form textarea {
+            margin-left: 30px;
+            background-color: #ececec;
+            margin-top: 20px;
+            width: 95%;
+            height: 100px;
+            font-size: 20px;
+        }
+
+        .comment_9 .right form button {
+            width: 95%;
+            height: 35px;
+            font-size: 20px;
+            background-color: #ececec;
+            margin: 10px 0 0 30px;
+        }
+
+        .foot {
+            width: 100%;
+            height: 350px;
+            margin-top: 40px;
+            background-color: rgba(73, 73, 73, 0.98);
+            position: relative;
+        }
+
+        .foot div {
+            padding-top: 50px;
+            color: #999;
+            text-align: center;
+        }
+
+        .foot form div input {
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+        }
+
+        .foot form div button {
+            height: 34px;
+            width: 50px;
+            margin-left: -4px;
+        }
+        .foot div span{
+            color: white;
+            padding: 0 8px;
+        }
+        .foot section{
+            background-color: rgba(27, 27, 27, 0.91);
+            height: 50px;
+            width: 100%;
+            color: white;
+            position: absolute;
+            bottom: 0;
+        }
+        .foot section p{
+            margin: 20px 50px 0 50px;
+        }
+    </style>
+</head>
+<body>
+<article class="main">
+    <article class="navbar">
+        <a href="/" style="text-decoration: none;font-size: 24px;">
+            <span class="fa fa-book fa-1x" style="margin-right: 10px;color: red;"></span>新世界</a>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/">最新活动</a></li>
+            <li><a href="/">项目介绍</a></li>
+            <li><a href="/">爱心社区</a></li>
+            <li><a href="/">关于我们</a></li>
+            <li><a href="/" style="color: red;"><i class="fa fa-user fa-1x">登陆</i> </a></li>
+        </ul>
+    </article>
+    <a name="top" id="top"></a>
+    <!--导航栏部分-->
+
+    <article class="comment_1">
+        <img src="../img/1_7_1.png">
+        <div class="comment_1_text">
+            <p style="font-size: 70px;">Time of new life</p>
+            <p class="p2" style="margin-top: 20px;">新时代，年轻的人们让我们一起</p>
+            <p class="p2">体验新生活，享受新生活</p>
+            <p class="p3">开始体验</p>
+        </div>
+    </article>
+    <!--第一部分-->
+
+    <article class="comment_2">
+        <div class="p1">
+            <span class="fa fa-dot-circle-o fa-3x"></span>
+            <p>
+                打造全新的世界观，让你更爱你的生活
+            </p>
+        </div>
+        <div class="p2">
+            <span class="fa fa-flag-o fa-3x"></span>
+            <p>
+                丰富多彩的公益活动，发挥新世界的主人公意识
+            </p>
+        </div>
+        <div class="p3">
+            <span class="fa fa-gift fa-3x"></span>
+            <p>
+                时尚新理念，超前体验未知的生活
+            </p>
+        </div>
+        <div class="p4">
+            <span class="fa fa-braille fa-2x"></span>
+            <p>
+                完善的培养机制，培养你全新的世界观
+            </p>
+        </div>
+    </article>
+    <!--第二部分-->
+
+    <article class="comment_3">
+        <span class="fa fa-book fa-5x"></span>
+        <p>关于新世界，还有什么你不知道的？</p>
+    </article>
+    <!--第三部分-->
+
+    <article class="comment_4">
+        <img src="../img/1_7_2.png">
+        <div>
+            <p>查找新世界城市活动</p>
+            <p style="font-size: 14px;padding-top: 10px;">每个城市有不同活动信息，请自主查询你所在的城市</p>
+            <form action="save.php" method="post">
+                <input type="text" name="china" placeholder="中国">
+                <select name="sheng">
+                    <option value="gd">广东</option>
+                    <option value="sh">上海</option>
+                    <option value="bj">北京</option>
+                </select>
+            </form>
+        </div>
+    </article>
+    <!--第四部分-->
+
+    <article class="comment_5">
+        <div>
+            <img src="../img/1_7_a.png">
+            <p class="p1">北京活动</p>
+            <p>新社区大联盟</p>
+        </div>
+        <div>
+            <p class="p1">上海活动</p>
+            <p>夜上海新景观探索</p>
+            <img src="../img/1_7_b.png">
+        </div>
+        <div>
+            <img src="../img/1_7_c.png">
+            <p class="p1">深圳活动</p>
+            <p>全新海岸线观点站</p>
+        </div>
+        <div>
+            <img src="../img/1_7_d.png">
+            <p class="p1">香港活动</p>
+            <p>奢侈消费打派送</p>
+        </div>
+    </article>
+    <!--第五部分-->
+
+    <article class="comment_6">
+        <div class="left">
+            <img src="../img/1_7_3.png">
+            <div>
+                <p style="font-size: 50px;">新世界</p>
+                <p style="font-size: 140px;margin-top: -30px;">TIME</p>
+                <p style="font-size: 22px;">@新世界 － 北京</p>
+                <p style="font-size: 21px;">2016.04.01</p>
+            </div>
+        </div>
+        <div class="right">
+            <section>
+                <p style="font-size: 25px">新世界 /<span style="color: red;"> 01</span></p>
+                <p style="text-indent: 2em; line-height: 30px; color: #999;">新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界
+                    新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界
+                </p>
+                <p style="width: 100px;height: 30px;margin: 0 auto; border: 1px solid red;">
+                    <span style="color: red;display: block;margin-top: 5px;">更多详情</span></p>
+            </section>
+        </div>
+    </article>
+    <!--第六部分-->
+
+    <article class="comment_7">
+        <div class="right">
+            <img src="../img/1_7_4.png">
+        </div>
+        <div class="left">
+            <section class="p1">
+                <div>
+                    <p>新时代</p>
+                    <p>关于爱生活的我们</p>
+                    <hr>
+                    <p id="p1"><span>查看更多</span></p>
+                </div>
+            </section>
+            <section class="p2">
+                <div>
+                    <p>新时代</p>
+                    <p>关于爱生活的我们</p>
+                    <hr style="border-color: black">
+                    <p id="p2"><span>查看更多</span></p>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!--第七部分-->
+
+    <article class="comment_8">
+        <p style="font-size: 30px;">成为我们的志愿者</p>
+        <hr style="width: 80px; border: 1px solid red; margin: 20px auto;">
+        <p style="color: #999;">新世界需要每一个爱生活的人加入，如果你够年轻、有梦想、有激情</p>
+        <p style="color: #999;">那就不要犹豫，看来加入我们，成为改变所有人生活的人</p>
+    </article>
+    <!--第八部分-->
+
+    <article class="comment_9">
+        <div class="left">
+            <h3>新世界志愿者协议</h3>
+            <br>
+            <p>加入新世界志愿者的人员必须遵守中华人民共和国相关法律，并且本着平等资源的原则</p>
+            <br>
+            <h3>新世界志愿者权利</h3>
+            <br>
+            <p>新世界志愿者享有新世界所有内部资源共享的权利，并且享受所在四新活动优先参与资格</p>
+            <br>
+            <h3>更多条款</h3>
+        </div>
+        <div class="right">
+            <form action="save.php" method="post">
+                <input type="text" name="username" placeholder="姓名:" id="i1">
+                <input type="text" name="yer" placeholder="年龄:" id="i2">
+                <input type="text" name="tal" placeholder="联系方式:" id="i3">
+                <input type="text" name="dizhi" placeholder="联系地址:" id="i4">
+                <textarea placeholder="请简单描述您的梦想生活："></textarea>
+                <button type="button">提交申请</button>
+            </form>
+        </div>
+    </article>
+    <!--第九部分-->
+
+    <footer class="foot">
+        <div>
+            <P style="font-size: 22px;color: white">联系我们</P>
+            <p>为了更好获取我们的产品资讯，您可以留下电子邮箱快速订阅我们的产品咨讯</p>
+            <p>也可以通过以下任何方式关注我们的动态</p>
+        </div>
+        <form action="save.php" method="post">
+            <div>
+                <input type="text" name="email" placeholder="someone@email.com">
+                <button type="button">提交</button>
+            </div>
+        </form>
+        <div style="margin-top: -25px;">
+            <span class="fa fa-qq fa-3x"></span>
+            <span class="fa fa-weibo fa-3x"></span>
+            <span class="fa fa-twitter fa-3x"></span>
+            <span class="fa fa-weixin fa-3x"></span>
+        </div>
+        <section>
+            <p style="float: left">@2016新世界</p>
+            <p><a href="#top" style="text-decoration: none;color: white;float: right">Back to top</a></p>
+        </section>
+    </footer>
+</article>
+
+
+</body>
+</html>
