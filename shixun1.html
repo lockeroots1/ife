@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shixun</title>
+    <style style="text/css">
+        section{
+            display: flex;
+            flex-direction:row;
+            /*
+            决定主轴的方向
+            row（默认）从左
+            row-reverse 从右
+            column 从上
+            coloumn  从下
+            */
+            flex-wrap: nowrap;
+            /*
+               项目在轴线上排列
+               nowrap （默认） 不换行
+               wrap 第一行在上方
+               wrap-reverse 换行 第一行在下方
+            */
+            flex-flow:row nowrap;
+            /*是flex-direction和flex-wrap的简写方式*/
+
+            justify-content:flex-start;
+            /*
+                项目的对齐方式
+                flex-start 左对齐
+                flex-end  右对齐
+                center  居中对齐
+                space-between 两端对齐
+                space-around 项目之间间隔相等
+            */
+            align-items: stretch;
+            /*
+            交叉轴上对齐方式
+            flex-start 起点对齐
+            flex－end 终点对齐
+            center 中点对齐
+            baseline 以第一行的文字为基线对齐
+            stretch （默认）将占满整个容器高度
+            */
+            align-content:stretch;
+            /*
+            多根轴线对齐方式
+            flex-star 起点对齐
+            flex－end 尾点对齐
+            center 中点对齐
+            space－between 交叉轴两端对齐
+            space－around 轴线之间间距相等
+            stretch 占满整个容器
+            */
+
+            /*项目属性*/
+            /*order:<number>;*/
+            /*
+                数值越小  排列越靠前
+            */
+            /*flex-grow:<number>;*/
+            /*
+                项目的放大比列
+            */
+            /*flex-shrink:<number>;*/
+            /*
+                项目的缩小比列
+            */
+            /*flex-basis:<length> | auto;*/
+            /*
+                在分配空间之前规定项目的大小
+            */
+
+            align-self:stretch;
+            /*
+                规定项目的对齐方式和其它项目不一样
+            */
+        }
+    </style>
+</head>
+<body>
+<article>
+    <section>
+
+    </section>
+
+    <section>
+
+    </section>
+</article>
+
+</body>
+</html>

@@ -3,35 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <title>百度前端学院</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        body{
+        body {
             margin: 0;
-            padding:0;
+            padding: 0;
             background-color: white;
         }
-        .header{
-            background-color: rgb(33,138,191);
+
+        .header {
+            background-color: rgb(33, 138, 191);
             height: 60px;
-            width:100%;
+            width: 100%;
             position: relative;
         }
-        .header img{
-            width:40px;
+
+        .header img {
+            width: 40px;
             height: 40px;
             position: absolute;
-            left:50px;
-            top:10px;
+            left: 50px;
+            top: 10px;
         }
-        .header_right{
+
+        .header_right {
             position: absolute;
             top: 10px;
-            right:50px;
+            right: 100px;
         }
-        .header_right form input{
-            width:350px;
+
+        .header_right form input {
+            width: 300px;
             height: 25px;
             border-radius: 20px;
+            background-image: url("../img/1_9_2.png");
+            background-repeat: no-repeat;
+            background-position: 4px;
+            padding-left: 55px;
+            font-size: 20px;
         }
+
+        .header a {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            text-decoration: none;
+            color: white;
+            background-image: url("../img/1_9_3.png");
+            background-position: -12px;
+            background-repeat: no-repeat;
+            line-height: 30px;
+            padding-left: 30px;
+        }
+
+        .comment {
+            width: 100%;
+            height: 1080px;
+            margin-bottom: 50px;
+        }
+
+        .left_comment {
+            width: 18%;
+            background-color: rgb(42, 46, 61);
+            float: left;
+        }
+
+        .left_comment .top {
+            width: 100%;
+            height: 180px;
+            position: relative;
+            color: white;
+        }
+
+        .left_comment .top img {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .left_comment .top > span {
+            position: absolute;
+            top: 55px;
+            left: 110px;
+        }
+
+        .left_comment .top div {
+            color: #999999;
+            position: absolute;
+            bottom: 10px;
+            left: 30px;
+        }
+
+        .top div p {
+            display: inline-block;
+        }
+
+        .top div p span {
+            display: block;
+        }
+
+        .left_comment .bottom {
+            width: 100%;
+            height: 880px;
+            font-size: 12px;
+        }
+
+        .left_comment .bottom .left_fa1 {
+            padding-left: 25px;
+            padding-top: 30px;
+            color: #999;
+            height: 180px;
+        }
+
+        .left_comment .bottom .left_fa1 div {
+            margin-bottom: 10px;
+        }
+
+        .left_comment .bottom .left_fa1 div span {
+            padding: 0 5px;
+        }
+        .left_comment .bottom .left_fa2{
+            color: #999999;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+        .left_comment .bottom .left_fa2 div{
+            margin-bottom:20px;
+            margin-left: 20px;
+        }
+        .left_comment .bottom .left_fa2 div span{
+            margin: 0 10px;
+        }
+        .right_comment{
+            width:82%;
+            background-color: rgb(238,238,237);
+            height: 1060px;
+            float: left;
+        }
+        .right_comment .right_nav{
+            background-color: white;
+            height: 30px;
+            width:100%;
+        }
+        .right_comment .right_nav span{
+            color: #999;
+            margin: 5px 7px;
+        }
+
 
     </style>
 </head>
@@ -44,8 +164,51 @@
                 <input type="text" name="header_so">
             </form>
         </div>
+        <a href="#">登陆</a>
     </section>
+    <!--导航栏-->
 
+    <section class="comment">
+        <section class="left_comment">
+            <section class="top">
+                <img src="../img/1_9_4.png" alt="log">
+                <span>Abc123</span>
+                <div>
+                    <p style="padding-right: 20px;border-right: 2px solid #999;"><span>110</span><span>收藏</span></p>
+                    <p style="padding-left: 20px;"><span>313</span><span>粉丝</span></p>
+                </div>
+            </section>
+            <!--左上部-->
+            <section class="bottom">
+                <section style="background-color: rgb(56, 61, 78);" class="left_fa1">
+                    <div style="color: white"><span class="fa fa-puzzle-piece fa-1x"></span>个人报表</div>
+                    <div>> <span class="fa fa-folder-o fa-1x"></span>文件一</div>
+                    <div style="color: white">> <span class="fa fa-folder-o fa-1x"></span>文件二</div>
+                    <div style="color: white;padding-left: 20px;"><span class="fa fa-file-code-o fa-1x"></span>文档一</div>
+                    <div style="padding-left: 20px;"><span class="fa fa-file-code-o fa-1x"></span>文档二</div>
+                    <div>> <span class="fa fa-folder-o fa-1x"></span>文件三</div>
+                </section>
+                <section class="left_fa2">
+                    <div><span class="fa fa-star fa-1x"></span>个人收藏</div>
+                    <div><span class="fa fa-cloud-download fa-1x"></span>我的分享</div>
+                    <div><span class="fa fa-image fa-1x"></span>图库</div>
+                    <div><span class="fa fa-star fa-1x"></span>成长记录</div>
+                    <div><span class="fa fa-rmb fa-1x"></span>账户记录</div>
+                </section>
+            </section>
+            <!--左下部-->
+        </section>
+        <!--左半部-->
+
+        <section class="right_comment">
+            <section class="right_nav">
+                <span>C站 /</span>
+                <span>个人报表 /</span>
+                <span>文件一 /</span>
+                <span style="color: blue">文档一</span>
+            </section>
+        </section>
+    </section>
 </article>
 
 </body>
