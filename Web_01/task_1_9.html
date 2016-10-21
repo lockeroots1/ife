@@ -124,34 +124,172 @@
         .left_comment .bottom .left_fa1 div span {
             padding: 0 5px;
         }
-        .left_comment .bottom .left_fa2{
+
+        .left_comment .bottom .left_fa2 {
             color: #999999;
             margin-top: 20px;
             font-size: 15px;
         }
-        .left_comment .bottom .left_fa2 div{
-            margin-bottom:20px;
+
+        .left_comment .bottom .left_fa2 div {
+            margin-bottom: 20px;
             margin-left: 20px;
         }
-        .left_comment .bottom .left_fa2 div span{
+
+        .left_comment .bottom .left_fa2 div span {
             margin: 0 10px;
         }
-        .right_comment{
-            width:82%;
-            background-color: rgb(238,238,237);
+
+        .right_comment {
+            width: 82%;
+            background-color: rgb(238, 238, 237);
             height: 1060px;
             float: left;
         }
-        .right_comment .right_nav{
+
+        .right_comment .right_nav {
             background-color: white;
             height: 30px;
-            width:100%;
+            width: 100%;
         }
-        .right_comment .right_nav span{
+
+        .right_comment .right_nav span {
             color: #999;
             margin: 5px 7px;
         }
 
+        .right_comment .search {
+            width: 90%;
+            background-color: white;
+            color: #999999;
+            height: 120px;
+            margin: 20px auto 0;
+            /*padding: 20px;*/
+            font-size: 12px;
+        }
+
+        .right_comment .search form section {
+            /*width:100px;*/
+            display: -webkit-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px;
+
+        }
+
+        .right_comment .search form section select {
+            /*display: inline;*/
+            width: 100px;
+        }
+
+        .right_comment .search form section input {
+            width: 100px;
+        }
+
+        .butt button {
+            width: 80px;
+            height: 30px;
+            background-color: blue;
+            font-size: 20px;
+            color: white;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .lishi {
+            height: 110px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 90%;
+            margin: 20px auto 0;
+        }
+
+        .lishi div {
+            background-color: white;
+            height: 80px;
+            width: 150px;
+            margin-right: 8px;
+            border-top: 1px solid rgb(202, 205, 208);
+            border-left: 1px solid rgb(202, 205, 208);
+        }
+
+        .lishi div .p1 {
+            color: rgb(237, 111, 17);
+            font-size: 22px;
+            text-align: center;
+            margin-top: -6px;
+        }
+
+        .lishi div .p1 span {
+            color: #999;
+            font-size: 18px;
+        }
+
+        .lishi div p {
+            text-align: center;
+        }
+
+        .tongji {
+            margin: 10px auto 0;
+            width: 90%;
+        }
+
+        .tongji section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tongji section div {
+            width: 300px;
+            height: 110px;
+            background-color: white;
+            border: 1px solid rgb(202, 205, 208);
+            margin-right: 20px;
+        }
+
+        .tongji section div p {
+            margin-left: 10px;
+        }
+
+        .tongji section div div {
+            width: 110px;
+            height: 66px;
+            margin-left: 150px;
+            margin-top: -60px;
+        }
+
+        .tongji section .p1 {
+            border-left: 3px solid rgb(67, 178, 157);
+        }
+
+        .tongji section .p1 div {
+            background-color: rgb(67, 178, 157);
+        }
+
+        .tongji section .p2 {
+            border-left: 3px solid rgb(56, 138, 193);
+        }
+
+        .tongji section .p2 div {
+            background-color: rgb(56, 138, 193);
+        }
+
+        .tongji section .p3 {
+            border-left: 3px solid rgb(208, 74, 54);
+        }
+
+        .tongji section .p3 div {
+            background-color: rgb(208, 74, 54);
+        }
+
+        .tongji section .p4 {
+            border-left: 3px solid rgb(226, 205, 71);
+        }
+
+        .tongji section .p4 div {
+            background-color: rgb(226, 205, 71);
+        }
 
     </style>
 </head>
@@ -207,6 +345,183 @@
                 <span>文件一 /</span>
                 <span style="color: blue">文档一</span>
             </section>
+
+            <section class="search">
+                <form action="save.php" method="post" style="display: -webkit-flex;justify-content: space-around;">
+                    <section>
+                        <div>查询项</div>
+                        <select name="one">
+                            <option value="yi">第一项</option>
+                            <option value="er">第二项</option>
+                            <option value="san">第三项</option>
+                        </select>
+                    </section>
+                    <section>
+                        <div>买方</div>
+                        <select name="tow">
+                            <option value="yi">小A</option>
+                            <option value="er">小B</option>
+                        </select>
+                        <div>卖方</div>
+                        <select name="three">
+                            <option value="yi">小C</option>
+                            <option value="er">小D</option>
+                        </select>
+                    </section>
+                    <section>
+                        <div>日期</div>
+                        <input type="text" name="date" placeholder="2016-10-15">
+                        <div>总耗时</div>
+                        <select name="times">
+                            <option value="yi">1 天</option>
+                            <option value="er">2 天</option>
+                        </select>
+                    </section>
+                    <section>
+                        <div>人数</div>
+                        <select name="guys">
+                            <option value="one">1 人</option>
+                            <option value="tow">2 人</option>
+                        </select>
+                        <div>成交项</div>
+                        <select name="cg">
+                            <option value="yi">10 项</option>
+                            <option value="er">11 项</option>
+                        </select>
+                    </section>
+                    <section class="butt">
+                        <button type="button">查找</button>
+                    </section>
+                </form>
+            </section>
+
+            <section class="lishi">
+                <div style="flex-basis: 30px;">
+                    <p style="margin-top: 20px;"><</p>
+                </div>
+                <div>
+                    <p>11:00 am</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1200</p>
+                </div>
+                <div>
+                    <p>11:00 am</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1300</p>
+                </div>
+                <div>
+                    <p>12:00 am</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1200</p>
+                </div>
+                <div>
+                    <p>01:00 pm</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1400</p>
+                </div>
+                <div>
+                    <p>02:00 pm</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1500 </p>
+                </div>
+                <div>
+                    <p>03:00 pm</p>
+                    <p class="p1"><span class="fa fa-rmb fa-lg"></span>1800</p>
+                </div>
+                <div style="flex-basis: 30px;">
+                    <p style="margin-top: 20px;">></p>
+                </div>
+                <div style="flex-basis: 150px;text-align: center">
+                    <span class="fa fa-calendar fa-2x" style="color: rgb(56,138,193);margin-top: 20px;"></span>历史查询
+                </div>
+            </section>
+
+            <section class="tongji">
+                <p>2016年10月统计</p>
+                <section>
+                    <div class="p1">
+                        <p>12312</p>
+                        <p style="color: rgb(181,181,181)">成交量</p>
+                        <div></div>
+                    </div>
+                    <div class="p2">
+                        <p>123254</p>
+                        <p style="color: rgb(181,181,181)">成交量</p>
+                        <div></div>
+                    </div>
+                    <div class="p3">
+                        <p>122354</p>
+                        <p style="color: rgb(181,181,181)">成交量</p>
+                        <div></div>
+                    </div>
+                    <div class="p4">
+                        <p>564532</p>
+                        <p style="color: rgb(181,181,181)">成交量</p>
+                        <div></div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="mianban">
+                <section>
+                    <p>第一组项目</p>
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="radio" id="tab1" checked>
+                                <label for="tab1">项目一</label>
+                                <div class="tab_1">
+                                    <table border="1" bordercolor="#ddd">
+                                        <tr>
+                                            <td>111</td>
+                                            <td>111</td>
+                                            <td>111</td>
+                                            <td>111</td>
+                                        </tr>
+                                        <tr>
+                                            <td>222</td>
+                                            <td>222</td>
+                                            <td>222</td>
+                                            <td>222</td>
+                                        </tr>
+                                        <tr>
+                                            <td>222</td>
+                                            <td>222</td>
+                                            <td>222</td>
+                                            <td>222</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="tab2">
+                                <label for="tab2">项目二</label>
+                                <div class="tab_2">
+                                    <table border="1">
+                                        <tr>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                            <td>6666</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5555</td>
+                                            <td>5555</td>
+                                            <td>5555</td>
+                                            <td>5555</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+
+                </section>
+            </section>
+
         </section>
     </section>
 </article>

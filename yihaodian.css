@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height:44px;
+    width: 100%;
+    position: relative;
+    background-color: #c51920;
+    color: white;
+    line-height: 44px;
+}

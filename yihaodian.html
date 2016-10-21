@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一号店</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        header {
+            height: 44px;
+            width: 981px;
+            position: relative;
+            background-color: #c51920;
+            color: white;
+            line-height: 44px;
+            margin: 0 auto;
+        }
+
+        header img {
+            height: 25px;
+            width: 95px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        header span a {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 115px;
+        }
+
+        header section {
+            float: right;
+            font-size: 12px;
+        }
+
+        header section span {
+            margin-right: 5px;
+        }
+
+        #js_img {
+            position: relative;
+            width: 975px;
+            height: 447px;
+            border: 2px solid #333;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        #js_img #list {
+            position: absolute;
+            z-index: 1;
+            width: 4875px;
+            height: 447px;
+        }
+
+        #js_img #list img {
+            width: 975px;
+            height: 447px;
+            float: left;
+        }
+
+        #js_img #buttons {
+            position: absolute;
+            left: 430px;
+            bottom: 20px;
+            z-index: 2;
+            height: 10px;
+            width: 100px;
+        }
+
+        #js_img #buttons span {
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ffffff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background-color: #333333;
+            cursor: pointer;
+        }
+
+        #js_img #buttons .on {
+            background-color: orangered;
+        }
+
+        #js_img .arrow {
+            position: absolute;
+            top: 180px;
+            z-index: 2;
+            display: none;
+            width: 40px;
+            height: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #js_img:hover .arrow {
+            display: block;
+        }
+
+        #prev {
+            left: 20px;
+        }
+
+        #next {
+            right: 20px;
+        }
+
+        /**/
+
+        .ico {
+            width: 981px;
+            height: 400px;
+            margin: 5px auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .ico div {
+            width: 24%;
+            height: 200px;
+            text-align: center;
+            border: 1px solid #dcdcdc;
+        }
+
+        .ico div p {
+            background-image: url('http://m.yihaojiaju.com/Images/index/navicons.png');
+            background-repeat: no-repeat;
+            height: 150px;
+            width: 150px;
+            background-size: 145px;
+            margin: 0 auto;
+        }
+
+        .calculator {
+            margin: 5px auto;
+            height: 200px;
+            width: 981px;
+            border-top: 1px solid rgba(228, 108, 0, 0.76);
+            box-shadow: inset 1px 1px 10px #414141;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 20px;
+        }
+
+        .calculator span {
+            color: rgba(228, 108, 0, 0.76);
+            margin-right: 5px;
+        }
+
+        .calculator form {
+            margin-top: 12px;
+        }
+
+        .calculator form hr {
+            border: 1px solid #999999;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 12px;
+        }
+
+        .calculator form {
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .calculator form div .S{
+            height: 30px;
+            width: 880px;
+            margin-top: 20px;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            border-right: 1px solid #999;
+            border-top: 0;
+        }
+        .calculator form div select{
+            line-height: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="http://m.yihaojiaju.com//Images/logo.png">
+    <span><a href="#">全国</a></span>
+    <section>
+        <span class="fa fa-user fa-lg">登陆</span>
+        <span class="fa fa-navicon fa-lg">导航</span>
+    </section>
+</header>
+<!--导航-->
+
+<article>
+    <section id="js_img">
+        <div id="list" style="left:-975px;">
+            <img src="http://image1.yihaojiaju.com/0/48/SysImg/134/2016/09/21/134707144.jpg" alt="1">
+            <img src="http://image1.yihaojiaju.com/0/48/SysImg/134/2016/10/11/115718020.jpg" alt="2">
+            <img src="http://image1.yihaojiaju.com/0/48/SysImg/134/2016/08/31/100601581.jpg" alt="3">
+            <img src="http://image1.yihaojiaju.com/0/48/SysImg/134/2016/10/18/090717906.jpg" alt="4">
+            <img src="http://image1.yihaojiaju.com/0/48/SysImg/134/2016/10/18/090841364.jpg" alt="5">
+        </div>
+        <div id="buttons">
+            <span class="on" index="1"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow"><</a>
+        <a href="javascript:;" id="next" class="arrow">></a>
+    </section>
+    <!--轮播-->
+
+    <section class="ico">
+        <div>
+            <p></p>
+            装修预算
+        </div>
+        <div>
+            <p style="background-position: 0 -193px"></p>
+            效果图
+        </div>
+        <div>
+            <p style="background-position: 0 -385px"></p>
+            设计师
+        </div>
+        <div>
+            <p style="background-position: 0 -577px"></p>
+            参观工地
+        </div>
+        <div>
+            <p style="background-position: 0 -769px"></p>
+            装修攻略
+        </div>
+        <div>
+            <p style="background-position: 0 -961px"></p>
+            家装馆
+        </div>
+        <div>
+            <p style="background-position: 0 -1153px"></p>
+            家居商城
+        </div>
+        <div>
+            <p style="background-position: 0 -1345px"></p>
+            体验馆
+        </div>
+    </section>
+    <!--图片导航-->
+
+    <section class="calculator">
+        <span class="fa fa-calculator"></span>计算您家装修多少钱
+        <form method="post" action="save.php">
+            <div>
+                <input type="radio" name="new" value="new1">新房
+            </div>
+            <div>
+                <input type="radio" name="new" value="old1">旧房
+            </div>
+            <hr>
+            <div>
+                <input type="text" name="S" value="请输入面积" class="S">
+            </div>
+            <div>
+                <select name="Fstyle">
+                    <option>现代风格</option>
+                    <option>中式</option>
+                </select>
+
+                <select name="dangci">
+                    <option>高档</option>
+                    <option>中档</option>
+                </select>
+            </div>
+            <div>
+                <button type="button" name="butt">1秒拿清单</button>
+            </div>
+            </form>
+    </section>
+</article>
+<script type="text/javascript">
+    window.onload = function () {
+        var list = document.getElementById("list");
+        var next = document.getElementById("next");
+        var prev = document.getElementById("prev");
+        var js_img = document.getElementById("js_img");
+
+        function animate(offset) {
+            var newleft = parseInt(list.style.left) + offset;
+            if (newleft < -3900) {
+                list.style.left = 0 + 'px'
+            }
+            else if (newleft > 0) {
+                list.style.left = -3900 + 'px'
+            }
+            else {
+                list.style.left = newleft + 'px';
+            }
+        }
+
+//        prev.onclick = function () {
+//            animate(975);
+//        };
+//        next.onclick = function () {
+//            animate(-975);
+//        };
+        var timer;
+
+        function play() {
+            timer = setInterval(function () {
+                prev.onclick()
+            }, 1500)
+        }
+
+
+        function stop() {
+            clearInterval(timer);
+        }
+
+
+        var buttons = document.getElementById("buttons").getElementsByTagName("span");
+        var index = 1;
+
+        function buttonShow() {
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].className == 'on') {
+                    buttons[i].className = '';
+                }
+            }
+            buttons[index - 1].className = 'on';
+        }
+
+        prev.onclick = function () {
+            index -= 1;
+            if (index < 1) {
+                index = 5;
+            }
+            animate(975);
+            buttonShow();
+        };
+        next.onclick = function () {
+            index += 1;
+            if (index > 5) {
+                index = 1;
+            }
+            animate(-975);
+            buttonShow();
+        }
+
+        for (var i = 0; i < buttons.length; i++) {
+            (function () {
+                buttons[i].onclick = function () {
+                    var clickIndex = parseInt(this.getAttribute('index'));
+                    var offset = 975 * (index - clickIndex);
+                    animate(offset);
+                    index = clickIndex;
+                    buttonShow();
+                }
+            })(i)
+        }
+
+        js_img.onmouseover = stop;
+        js_img.onmouseout = play;
+
+        play();
+    };
+
+
+</script>
+</body>
+</html>
