@@ -28,8 +28,13 @@
         function test() {
             dis.innerHTML = parseInt(document.getElementById("aqi-input").value);
         }
-
         but.addEventListener("click", test, false);
+//        but.removeEventListener("click",test,false);
+
+//        IE
+        but.attachEvent("onclick",test);
+//        but.detachEvent("onclick",test);
+
 
     })
     ();
